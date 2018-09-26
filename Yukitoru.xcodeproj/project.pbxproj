@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2E047F680AF1E111ACB370 /* Pods_YukitoruTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C336470EC0E2120221006D91 /* Pods_YukitoruTests.framework */; };
+		9781F7B3F4581AD469EA3483 /* Pods_Yukitoru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEFAC808AAEC294FE56A0C1 /* Pods_Yukitoru.framework */; };
+		EE84AF59215B862B00BBD5C1 /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84AF58215B862B00BBD5C1 /* imageViewController.swift */; };
+		EE84AF5B215B863F00BBD5C1 /* quizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */; };
+		EE84AF5D215B864C00BBD5C1 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */; };
 		EEC7C70B215B686500CDAEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7C70A215B686500CDAEC7 /* AppDelegate.swift */; };
 		EEC7C70D215B686500CDAEC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7C70C215B686500CDAEC7 /* ViewController.swift */; };
 		EEC7C710215B686500CDAEC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC7C70E215B686500CDAEC7 /* Main.storyboard */; };
@@ -14,6 +19,7 @@
 		EEC7C715215B686900CDAEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC7C713215B686900CDAEC7 /* LaunchScreen.storyboard */; };
 		EEC7C720215B686900CDAEC7 /* YukitoruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7C71F215B686900CDAEC7 /* YukitoruTests.swift */; };
 		EEC7C72B215B686900CDAEC7 /* YukitoruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7C72A215B686900CDAEC7 /* YukitoruUITests.swift */; };
+		FD2FD6BDD80A2405C559A661 /* Pods_YukitoruUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FA1F8ADCECB1AFFDE6DE16 /* Pods_YukitoruUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49B11D270F908E5DF128ED53 /* Pods-YukitoruTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukitoruTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YukitoruTests/Pods-YukitoruTests.release.xcconfig"; sourceTree = "<group>"; };
+		4FA66153F98D6864974B77EF /* Pods-Yukitoru.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yukitoru.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yukitoru/Pods-Yukitoru.debug.xcconfig"; sourceTree = "<group>"; };
+		8D3B8107671C7B8E3FA48593 /* Pods-YukitoruUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukitoruUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YukitoruUITests/Pods-YukitoruUITests.release.xcconfig"; sourceTree = "<group>"; };
+		93FA1F8ADCECB1AFFDE6DE16 /* Pods_YukitoruUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukitoruUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD7F2BB2CDA7D793A19CE88 /* Pods-YukitoruUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukitoruUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YukitoruUITests/Pods-YukitoruUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C336470EC0E2120221006D91 /* Pods_YukitoruTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukitoruTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62D8C77779BA2DD25970B39 /* Pods-Yukitoru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yukitoru.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yukitoru/Pods-Yukitoru.release.xcconfig"; sourceTree = "<group>"; };
+		EE84AF58215B862B00BBD5C1 /* imageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
+		EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizViewController.swift; sourceTree = "<group>"; };
+		EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		EEC7C707215B686500CDAEC7 /* Yukitoru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yukitoru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC7C70A215B686500CDAEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEC7C70C215B686500CDAEC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +63,8 @@
 		EEC7C726215B686900CDAEC7 /* YukitoruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YukitoruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC7C72A215B686900CDAEC7 /* YukitoruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YukitoruUITests.swift; sourceTree = "<group>"; };
 		EEC7C72C215B686900CDAEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFEFAC808AAEC294FE56A0C1 /* Pods_Yukitoru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yukitoru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F284A42F3AE3A025FC8ACA /* Pods-YukitoruTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukitoruTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YukitoruTests/Pods-YukitoruTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9781F7B3F4581AD469EA3483 /* Pods_Yukitoru.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2E047F680AF1E111ACB370 /* Pods_YukitoruTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2FD6BDD80A2405C559A661 /* Pods_YukitoruUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393A8C327533DC241F7A66E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FA66153F98D6864974B77EF /* Pods-Yukitoru.debug.xcconfig */,
+				C62D8C77779BA2DD25970B39 /* Pods-Yukitoru.release.xcconfig */,
+				F5F284A42F3AE3A025FC8ACA /* Pods-YukitoruTests.debug.xcconfig */,
+				49B11D270F908E5DF128ED53 /* Pods-YukitoruTests.release.xcconfig */,
+				9DD7F2BB2CDA7D793A19CE88 /* Pods-YukitoruUITests.debug.xcconfig */,
+				8D3B8107671C7B8E3FA48593 /* Pods-YukitoruUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		781C289F5E7E7B8517B67697 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFEFAC808AAEC294FE56A0C1 /* Pods_Yukitoru.framework */,
+				C336470EC0E2120221006D91 /* Pods_YukitoruTests.framework */,
+				93FA1F8ADCECB1AFFDE6DE16 /* Pods_YukitoruUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EEC7C6FE215B686500CDAEC7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +125,8 @@
 				EEC7C71E215B686900CDAEC7 /* YukitoruTests */,
 				EEC7C729215B686900CDAEC7 /* YukitoruUITests */,
 				EEC7C708215B686500CDAEC7 /* Products */,
+				393A8C327533DC241F7A66E1 /* Pods */,
+				781C289F5E7E7B8517B67697 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +149,9 @@
 				EEC7C711215B686900CDAEC7 /* Assets.xcassets */,
 				EEC7C713215B686900CDAEC7 /* LaunchScreen.storyboard */,
 				EEC7C716215B686900CDAEC7 /* Info.plist */,
+				EE84AF58215B862B00BBD5C1 /* imageViewController.swift */,
+				EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */,
+				EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */,
 			);
 			path = Yukitoru;
 			sourceTree = "<group>";
@@ -132,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEC7C72F215B686900CDAEC7 /* Build configuration list for PBXNativeTarget "Yukitoru" */;
 			buildPhases = (
+				AC34476D4435D6167652AFE6 /* [CP] Check Pods Manifest.lock */,
 				EEC7C703215B686500CDAEC7 /* Sources */,
 				EEC7C704215B686500CDAEC7 /* Frameworks */,
 				EEC7C705215B686500CDAEC7 /* Resources */,
+				6E8F00EF510050F221E7D7BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEC7C732215B686900CDAEC7 /* Build configuration list for PBXNativeTarget "YukitoruTests" */;
 			buildPhases = (
+				3043F7AEB22EACA7DE514CA7 /* [CP] Check Pods Manifest.lock */,
 				EEC7C717215B686900CDAEC7 /* Sources */,
 				EEC7C718215B686900CDAEC7 /* Frameworks */,
 				EEC7C719215B686900CDAEC7 /* Resources */,
@@ -167,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEC7C735215B686900CDAEC7 /* Build configuration list for PBXNativeTarget "YukitoruUITests" */;
 			buildPhases = (
+				2085A69EEA840D9EBEB94F71 /* [CP] Check Pods Manifest.lock */,
 				EEC7C722215B686900CDAEC7 /* Sources */,
 				EEC7C723215B686900CDAEC7 /* Frameworks */,
 				EEC7C724215B686900CDAEC7 /* Resources */,
@@ -251,13 +304,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2085A69EEA840D9EBEB94F71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YukitoruUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3043F7AEB22EACA7DE514CA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YukitoruTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E8F00EF510050F221E7D7BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Yukitoru/Pods-Yukitoru-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yukitoru/Pods-Yukitoru-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC34476D4435D6167652AFE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yukitoru-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EEC7C703215B686500CDAEC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE84AF5D215B864C00BBD5C1 /* resultViewController.swift in Sources */,
+				EE84AF59215B862B00BBD5C1 /* imageViewController.swift in Sources */,
 				EEC7C70D215B686500CDAEC7 /* ViewController.swift in Sources */,
 				EEC7C70B215B686500CDAEC7 /* AppDelegate.swift in Sources */,
+				EE84AF5B215B863F00BBD5C1 /* quizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +577,7 @@
 		};
 		EEC7C730215B686900CDAEC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FA66153F98D6864974B77EF /* Pods-Yukitoru.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -440,13 +588,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = maho.Yukitoru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		EEC7C731215B686900CDAEC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C62D8C77779BA2DD25970B39 /* Pods-Yukitoru.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -457,13 +606,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = maho.Yukitoru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		EEC7C733215B686900CDAEC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5F284A42F3AE3A025FC8ACA /* Pods-YukitoruTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +634,7 @@
 		};
 		EEC7C734215B686900CDAEC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49B11D270F908E5DF128ED53 /* Pods-YukitoruTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +655,7 @@
 		};
 		EEC7C736215B686900CDAEC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DD7F2BB2CDA7D793A19CE88 /* Pods-YukitoruUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +675,7 @@
 		};
 		EEC7C737215B686900CDAEC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D3B8107671C7B8E3FA48593 /* Pods-YukitoruUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
