@@ -7,24 +7,50 @@
 //
 
 import UIKit
+import RealmSwift
 
-class resultViewController: UIViewController {
+class resultViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
 
+    @IBOutlet var table: UITableView!
+    @IBOutlet var label:UILabel!
+    
+    var correctAnswer: Int = 0
+
+    let realm = try! Realm()
+    
+    var realmDataArray: Array<RealmData>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        table.dataSource = self
+        table.delegate = self
+        label.text = String(correctAnswer)
+        realmDataArray = realm.objects(RealmData.self).map{$0}
+        
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+//        cell?.textLabel?.text = songNameArray[indexPath.row]
+//        cell?.imageView?.image = UIImage(named: imageNameArray[indexPath.row])
+        return cell!
     }
-    */
+    
+    //tableViewを触った時に動く
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("\(songNameArray[indexPath.row])が選ばれました")
+        
+//        let audioPath = URL(fileURLWithPath: Bundle.main.path(forResource: fileNameArray [indexPath.row],ofType:"mp3")!)
+//        audioPlayer = try? AVAudioPlayer(contentsOf: audioPath)
+//
+//        audioPlayer.play()
+    }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return realmDataArray.count
+    }
 }
