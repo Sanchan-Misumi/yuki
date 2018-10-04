@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 import RealmSwift
 
 class resultViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {

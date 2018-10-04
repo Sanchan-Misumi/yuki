@@ -9,11 +9,17 @@
 import UIKit
 import Spring
 import RealmSwift
+import Firebase
 
 class imageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
 
+    let SCREEN_SIZE = UIScreen.main.bounds.size
+    
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet var textField: UITextField!
+    
+    //インスタンス変数
+//    var fireBase: DatabaseReference!
     
     
     // デフォルトのファイルを利用する初期化
@@ -24,7 +30,27 @@ class imageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
-        // Do any additional setup after loading the view.
+        //インスタンスを作成
+//        fireBase = Database.database().reference()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(quizViewController.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        //ここでUIKeyboardWillShowという名前の通知のイベントをオブザーバー登録をしている
+        NotificationCenter.default.addObserver(self, selector: #selector(quizViewController.keyboardWillHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+        
+    }
+    
+    //UIKeyboardWillShow通知を受けて、実行される関数
+    @objc func keyboardWillShow(_ notification: NSNotification){
+        
+        let keyboardHeight = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue.height
+        textField.frame.origin.y = SCREEN_SIZE.height - keyboardHeight - textField.frame.height
+        
+    }
+    
+    
+    //UIKeyboardWillShow通知を受けて、実行される関数
+    @objc func keyboardWillHide(_ notification: NSNotification){
+        //        photoTitle.frame.origin.y = SCREEN_SIZE.height - photoTitle.frame.height
     }
     
     
@@ -46,7 +72,6 @@ class imageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBAction func savePhoto(_ sender: Any) {
         let imageData: Data = (photoImage.image)!.jpegData(compressionQuality: 1)!
-//        let imageData: Data = UIImage.jpegData(compressionQuality:photoImage.image!, 1)
         
         imageAndTitle.photoImageData = imageData
         imageAndTitle.title = textField.text!
@@ -95,6 +120,15 @@ class imageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         self.view.endEditing(true)
     }
+    
+//    //firebaseを使うためのメソッド
+//    func fileupload(deta: UIImage){
+//        //保存するURLを指定
+//        let storageRef = storage.reference(forURL: "yukitoru-cha601.appspot.com")
+//        //ディレクトリを指定
+//        let imageRef = storageRef.image("")
+//
+//    }
 
 }
 

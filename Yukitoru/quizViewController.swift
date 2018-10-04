@@ -86,11 +86,12 @@ class quizViewController: UIViewController,UITextFieldDelegate {
     
     func setPhotoAndTitle() {
         //一時的にクイズを取り出す配列
+        if quizArray != [] {
         let realmData = quizArray[0]
         
         //問題のイメージを表示
         photoImage.image = UIImage(data: realmData.photoImageData)
-        
+        }
         
         //        let imageData = UIImage(data: realmDataArray[identifier].photoImageData)
         //        photoImage.image = imageData
