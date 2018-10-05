@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Spring
 
 class quizViewController: UIViewController,UITextFieldDelegate {
     
@@ -42,7 +43,8 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         realmDataArray = realm.objects(RealmData.self).map{$0}
         print("quizで読み込まれたよ\(String(describing: realmDataArray))")
     
-        
+//        let toCheck = realm.objects(RealmData.self).map{$0}
+//        print(toCheck[0].photoImageData)
         //問題をシャッフルしてquizArrayに格納する
         while (realmDataArray.count > 0){
             let index = Int(arc4random()) % realmDataArray.count
@@ -70,6 +72,8 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         view.endEditing(true)
     }
     
+
+    
     //UIKeyboardWillShow通知を受けて、実行される関数
     @objc func keyboardWillShow(_ notification: NSNotification){
         
@@ -85,12 +89,12 @@ class quizViewController: UIViewController,UITextFieldDelegate {
     }
     
     func setPhotoAndTitle() {
+        
         //一時的にクイズを取り出す配列
         if quizArray != [] {
-        let realmData = quizArray[0]
         
         //問題のイメージを表示
-        photoImage.image = UIImage(data: realmData.photoImageData)
+        photoImage.image = UIImage(data: quizArray[0].photoImageData)
         }
         
         //        let imageData = UIImage(data: realmDataArray[identifier].photoImageData)
@@ -102,7 +106,7 @@ class quizViewController: UIViewController,UITextFieldDelegate {
     @IBAction func answer(_ sender: Any) {
         
         //一時的にクイズを取り出す配列
-        let realmData = quizArray[0]
+     
         
         writeAnswer = photoTitle.text!
         
@@ -110,10 +114,10 @@ class quizViewController: UIViewController,UITextFieldDelegate {
             performSegue(withIdentifier: "toResultView", sender: nil)
         }
 //
-        if writeAnswer == realmData.title {
+        if writeAnswer == quizArray[0].title {
             correctAnswer = correctAnswer + 1
             answer.text = "正解"
-        } else if writeAnswer != realmData.title{
+        } else if writeAnswer != quizArray[0].title{
             answer.text = "不正解"
         }
         
@@ -125,6 +129,9 @@ class quizViewController: UIViewController,UITextFieldDelegate {
             performSegueToResult()
         } else {
             setPhotoAndTitle()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            self.photoTitle.text = ""
         }
     }
     

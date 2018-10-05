@@ -14,7 +14,7 @@ import Firebase
 class imageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
 
     let SCREEN_SIZE = UIScreen.main.bounds.size
-    
+    var originHeight: CGFloat = 0.0
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet var textField: UITextField!
     
@@ -43,6 +43,8 @@ class imageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @objc func keyboardWillShow(_ notification: NSNotification){
         
         let keyboardHeight = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue.height
+        
+        originHeight =  textField.frame.origin.y
         textField.frame.origin.y = SCREEN_SIZE.height - keyboardHeight - textField.frame.height
         
     }
@@ -50,7 +52,7 @@ class imageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     //UIKeyboardWillShow通知を受けて、実行される関数
     @objc func keyboardWillHide(_ notification: NSNotification){
-        //        photoTitle.frame.origin.y = SCREEN_SIZE.height - photoTitle.frame.height
+        textField.frame.origin.y = originHeight
     }
     
     

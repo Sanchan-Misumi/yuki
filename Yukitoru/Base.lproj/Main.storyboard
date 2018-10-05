@@ -70,7 +70,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="化合物" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="ka4-J7-rmj">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="化合物の名前" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="ka4-J7-rmj">
                                 <rect key="frame" x="83" y="450" width="248" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZv-JS-W1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1891.304347826087" y="547.01086956521749"/>
+            <point key="canvasLocation" x="2042" y="-218"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="pw3-hv-AVK">
@@ -140,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byV-nZ-JdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710.144927536232" y="546.19565217391312"/>
+            <point key="canvasLocation" x="3045" y="-218"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="8RC-Lh-scO">
@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qui-5A-Xoa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892.753623188406" y="-206.25000000000003"/>
+            <point key="canvasLocation" x="2042" y="618"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MEE-Hz-x4L">

@@ -19,7 +19,7 @@
 		EEC7C715215B686900CDAEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC7C713215B686900CDAEC7 /* LaunchScreen.storyboard */; };
 		EEC7C720215B686900CDAEC7 /* YukitoruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7C71F215B686900CDAEC7 /* YukitoruTests.swift */; };
 		EEC7C72B215B686900CDAEC7 /* YukitoruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7C72A215B686900CDAEC7 /* YukitoruUITests.swift */; };
-		EECF51562161C05300194099 /* relm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF51552161C05300194099 /* relm.swift */; };
+		EECF51562161C05300194099 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF51552161C05300194099 /* RealmData.swift */; };
 		EEFF9D1F2164BA4A0055C81D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */; };
 		FD2FD6BDD80A2405C559A661 /* Pods_YukitoruUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FA1F8ADCECB1AFFDE6DE16 /* Pods_YukitoruUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,7 +65,7 @@
 		EEC7C726215B686900CDAEC7 /* YukitoruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YukitoruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC7C72A215B686900CDAEC7 /* YukitoruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YukitoruUITests.swift; sourceTree = "<group>"; };
 		EEC7C72C215B686900CDAEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EECF51552161C05300194099 /* relm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = relm.swift; sourceTree = "<group>"; };
+		EECF51552161C05300194099 /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EFEFAC808AAEC294FE56A0C1 /* Pods_Yukitoru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yukitoru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F284A42F3AE3A025FC8ACA /* Pods-YukitoruTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukitoruTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YukitoruTests/Pods-YukitoruTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 				EE84AF58215B862B00BBD5C1 /* imageViewController.swift */,
 				EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */,
 				EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */,
-				EECF51552161C05300194099 /* relm.swift */,
+				EECF51552161C05300194099 /* RealmData.swift */,
 				EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */,
 			);
 			path = Yukitoru;
@@ -420,7 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE84AF5D215B864C00BBD5C1 /* resultViewController.swift in Sources */,
-				EECF51562161C05300194099 /* relm.swift in Sources */,
+				EECF51562161C05300194099 /* RealmData.swift in Sources */,
 				EE84AF59215B862B00BBD5C1 /* imageViewController.swift in Sources */,
 				EEC7C70D215B686500CDAEC7 /* ViewController.swift in Sources */,
 				EEC7C70B215B686500CDAEC7 /* AppDelegate.swift in Sources */,
