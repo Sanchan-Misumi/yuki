@@ -10,6 +10,8 @@ import UIKit
 import Spring
 import RealmSwift
 import Firebase
+//import FirebaseDatabase
+//import FirebaseStorage
 
 class imageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
 
@@ -85,6 +87,7 @@ class imageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         self.dismiss(animated: true, completion: nil)
         
+        fileupload(deta: imageData)
         
     }
     
@@ -123,14 +126,25 @@ class imageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         self.view.endEditing(true)
     }
     
-//    //firebaseを使うためのメソッド
-//    func fileupload(deta: UIImage){
-//        //保存するURLを指定
-//        let storageRef = storage.reference(forURL: "yukitoru-cha601.appspot.com")
-//        //ディレクトリを指定
-//        let imageRef = storageRef.image("")
-//
-//    }
+    //firebaseを使うためのメソッド
+    func fileupload(deta: Data){
+        //画像のアップロード
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+//        
+//        let tango = Database.database().reference().child(<#T##pathString: String##String#>)
+        
+//        let tango = Database.database().reference().child("users").child(user.uid).childByAutoId()
+        
+        
+        //データを保存
+            let reference = storageRef.child("images/" + "1" + ".jpg")
+            reference.putData(deta, metadata: nil, completion: { metaData, error in
+                print(metaData as Any)
+                print(error as Any)
+                
+            })
+    }
 
 }
 

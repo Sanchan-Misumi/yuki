@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C2E047F680AF1E111ACB370 /* Pods_YukitoruTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C336470EC0E2120221006D91 /* Pods_YukitoruTests.framework */; };
 		9781F7B3F4581AD469EA3483 /* Pods_Yukitoru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEFAC808AAEC294FE56A0C1 /* Pods_Yukitoru.framework */; };
+		EE2B03E12169F47700A54A9D /* 青 250.png in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03E02169F47700A54A9D /* 青 250.png */; };
 		EE84AF59215B862B00BBD5C1 /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84AF58215B862B00BBD5C1 /* imageViewController.swift */; };
 		EE84AF5B215B863F00BBD5C1 /* quizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */; };
 		EE84AF5D215B864C00BBD5C1 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */; };
@@ -21,6 +22,14 @@
 		EEC7C72B215B686900CDAEC7 /* YukitoruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7C72A215B686900CDAEC7 /* YukitoruUITests.swift */; };
 		EECF51562161C05300194099 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF51552161C05300194099 /* RealmData.swift */; };
 		EEFF9D1F2164BA4A0055C81D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */; };
+		EEFF9D602169C0AE0055C81D /* MyWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF9D5F2169C0AE0055C81D /* MyWordViewController.swift */; };
+		EEFF9D622169C0D30055C81D /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF9D612169C0D30055C81D /* WordListViewController.swift */; };
+		EEFF9D642169C1380055C81D /* CreatMyWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF9D632169C1380055C81D /* CreatMyWordViewController.swift */; };
+		EEFF9D662169C14F0055C81D /* AllWordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF9D652169C14F0055C81D /* AllWordListViewController.swift */; };
+		EEFF9D6A2169E7AA0055C81D /* オレンジ.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFF9D672169E7A90055C81D /* オレンジ.png */; };
+		EEFF9D6C2169E7AA0055C81D /* ピンク.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFF9D692169E7A90055C81D /* ピンク.png */; };
+		EEFF9D702169EC700055C81D /* OriginalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF9D6F2169EC700055C81D /* OriginalTabBarController.swift */; };
+		EEFF9D742169EF3F0055C81D /* あお.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFF9D732169EF3F0055C81D /* あお.png */; };
 		FD2FD6BDD80A2405C559A661 /* Pods_YukitoruUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FA1F8ADCECB1AFFDE6DE16 /* Pods_YukitoruUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +58,7 @@
 		9DD7F2BB2CDA7D793A19CE88 /* Pods-YukitoruUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukitoruUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YukitoruUITests/Pods-YukitoruUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C336470EC0E2120221006D91 /* Pods_YukitoruTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukitoruTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D8C77779BA2DD25970B39 /* Pods-Yukitoru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yukitoru.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yukitoru/Pods-Yukitoru.release.xcconfig"; sourceTree = "<group>"; };
+		EE2B03E02169F47700A54A9D /* 青 250.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "青 250.png"; sourceTree = "<group>"; };
 		EE84AF58215B862B00BBD5C1 /* imageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
 		EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizViewController.swift; sourceTree = "<group>"; };
 		EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +77,14 @@
 		EEC7C72C215B686900CDAEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EECF51552161C05300194099 /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EEFF9D5F2169C0AE0055C81D /* MyWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWordViewController.swift; sourceTree = "<group>"; };
+		EEFF9D612169C0D30055C81D /* WordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
+		EEFF9D632169C1380055C81D /* CreatMyWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatMyWordViewController.swift; sourceTree = "<group>"; };
+		EEFF9D652169C14F0055C81D /* AllWordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWordListViewController.swift; sourceTree = "<group>"; };
+		EEFF9D672169E7A90055C81D /* オレンジ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "オレンジ.png"; sourceTree = SOURCE_ROOT; };
+		EEFF9D692169E7A90055C81D /* ピンク.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ピンク.png"; sourceTree = SOURCE_ROOT; };
+		EEFF9D6F2169EC700055C81D /* OriginalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabBarController.swift; sourceTree = "<group>"; };
+		EEFF9D732169EF3F0055C81D /* あお.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "あお.png"; sourceTree = "<group>"; };
 		EFEFAC808AAEC294FE56A0C1 /* Pods_Yukitoru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yukitoru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F284A42F3AE3A025FC8ACA /* Pods-YukitoruTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukitoruTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YukitoruTests/Pods-YukitoruTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,17 +165,19 @@
 		EEC7C709215B686500CDAEC7 /* Yukitoru */ = {
 			isa = PBXGroup;
 			children = (
+				EEFF9D5D2169C0180055C81D /* 単語帳を解く */,
+				EEFF9D5C2169C0120055C81D /* 単語帳を作る */,
+				EEFF9D5E2169C01D0055C81D /* 単語帳を共有する */,
 				EEC7C70A215B686500CDAEC7 /* AppDelegate.swift */,
-				EEC7C70C215B686500CDAEC7 /* ViewController.swift */,
 				EEC7C70E215B686500CDAEC7 /* Main.storyboard */,
 				EEC7C711215B686900CDAEC7 /* Assets.xcassets */,
 				EEC7C713215B686900CDAEC7 /* LaunchScreen.storyboard */,
 				EEC7C716215B686900CDAEC7 /* Info.plist */,
-				EE84AF58215B862B00BBD5C1 /* imageViewController.swift */,
-				EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */,
-				EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */,
-				EECF51552161C05300194099 /* RealmData.swift */,
-				EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */,
+				EEFF9D732169EF3F0055C81D /* あお.png */,
+				EE2B03E02169F47700A54A9D /* 青 250.png */,
+				EEFF9D672169E7A90055C81D /* オレンジ.png */,
+				EEFF9D692169E7A90055C81D /* ピンク.png */,
+				EEFF9D6F2169EC700055C81D /* OriginalTabBarController.swift */,
 			);
 			path = Yukitoru;
 			sourceTree = "<group>";
@@ -178,6 +198,37 @@
 				EEC7C72C215B686900CDAEC7 /* Info.plist */,
 			);
 			path = YukitoruUITests;
+			sourceTree = "<group>";
+		};
+		EEFF9D5C2169C0120055C81D /* 単語帳を作る */ = {
+			isa = PBXGroup;
+			children = (
+				EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */,
+				EECF51552161C05300194099 /* RealmData.swift */,
+				EE84AF58215B862B00BBD5C1 /* imageViewController.swift */,
+				EEFF9D5F2169C0AE0055C81D /* MyWordViewController.swift */,
+				EEFF9D612169C0D30055C81D /* WordListViewController.swift */,
+				EEFF9D632169C1380055C81D /* CreatMyWordViewController.swift */,
+			);
+			path = "単語帳を作る";
+			sourceTree = "<group>";
+		};
+		EEFF9D5D2169C0180055C81D /* 単語帳を解く */ = {
+			isa = PBXGroup;
+			children = (
+				EEC7C70C215B686500CDAEC7 /* ViewController.swift */,
+				EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */,
+				EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */,
+			);
+			path = "単語帳を解く";
+			sourceTree = "<group>";
+		};
+		EEFF9D5E2169C01D0055C81D /* 単語帳を共有する */ = {
+			isa = PBXGroup;
+			children = (
+				EEFF9D652169C14F0055C81D /* AllWordListViewController.swift */,
+			);
+			path = "単語帳を共有する";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +342,10 @@
 				EEC7C715215B686900CDAEC7 /* LaunchScreen.storyboard in Resources */,
 				EEFF9D1F2164BA4A0055C81D /* GoogleService-Info.plist in Resources */,
 				EEC7C712215B686900CDAEC7 /* Assets.xcassets in Resources */,
+				EEFF9D6A2169E7AA0055C81D /* オレンジ.png in Resources */,
+				EE2B03E12169F47700A54A9D /* 青 250.png in Resources */,
+				EEFF9D6C2169E7AA0055C81D /* ピンク.png in Resources */,
+				EEFF9D742169EF3F0055C81D /* あお.png in Resources */,
 				EEC7C710215B686500CDAEC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +478,12 @@
 				EECF51562161C05300194099 /* RealmData.swift in Sources */,
 				EE84AF59215B862B00BBD5C1 /* imageViewController.swift in Sources */,
 				EEC7C70D215B686500CDAEC7 /* ViewController.swift in Sources */,
+				EEFF9D662169C14F0055C81D /* AllWordListViewController.swift in Sources */,
+				EEFF9D642169C1380055C81D /* CreatMyWordViewController.swift in Sources */,
+				EEFF9D602169C0AE0055C81D /* MyWordViewController.swift in Sources */,
+				EEFF9D702169EC700055C81D /* OriginalTabBarController.swift in Sources */,
 				EEC7C70B215B686500CDAEC7 /* AppDelegate.swift in Sources */,
+				EEFF9D622169C0D30055C81D /* WordListViewController.swift in Sources */,
 				EE84AF5B215B863F00BBD5C1 /* quizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -59,6 +59,10 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         //ここでUIKeyboardWillShowという名前の通知のイベントをオブザーバー登録をしている
         NotificationCenter.default.addObserver(self, selector: #selector(quizViewController.keyboardWillHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
         
+        //imageViewの角を丸くするコード
+        photoImage.layer.cornerRadius = photoImage.frame.size.width * 0.1
+        photoImage.clipsToBounds = true
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -147,5 +151,7 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+
 
 }
