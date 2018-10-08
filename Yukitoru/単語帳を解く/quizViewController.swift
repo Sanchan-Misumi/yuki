@@ -9,21 +9,26 @@
 import UIKit
 import RealmSwift
 import Spring
+import AVFoundation
 
 class quizViewController: UIViewController,UITextFieldDelegate {
     
     let SCREEN_SIZE = UIScreen.main.bounds.size
+    var audioPlayer1: AVAudioPlayer!
 
     @IBOutlet var photoImage: UIImageView!
-    @IBOutlet weak var photoTitle: UITextField!
-    
+    @IBOutlet var photoTitle: UITextField!
+    @IBOutlet var answerImage: UIImageView!
     //結果を表示させるラベル
     @IBOutlet var answer: UILabel!
+    @IBOutlet var label: UILabel!
     
     //正解数を数える
     var correctAnswer: Int = 0
     //回答した答えを格納する
     var writeAnswer: String = ""
+    //textFieldの元々の位置を保存しておく
+    var originHeight: CGFloat = 0.0
     
     //問題文を格納する配列
     var quizArray = [RealmData]()
@@ -63,6 +68,8 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         photoImage.layer.cornerRadius = photoImage.frame.size.width * 0.1
         photoImage.clipsToBounds = true
         
+        originHeight =  photoTitle.frame.origin.y
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,6 +81,7 @@ class quizViewController: UIViewController,UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //キーボードを閉じる処理
         view.endEditing(true)
+        photoTitle.frame.origin.y = originHeight
     }
     
 
@@ -120,9 +128,21 @@ class quizViewController: UIViewController,UITextFieldDelegate {
 //
         if writeAnswer == quizArray[0].title {
             correctAnswer = correctAnswer + 1
-            answer.text = "正解"
+            answerImage.image = UIImage(named: "true.png")
+            setAudioPlayer(soundName : "Quiz-Correct_Answer02-2", type : "mp3")
+            audioPlayer1.play()
+//            answerImage.alpha = 0.0
+//            UIView.animate(withDuration: 2.0, animations: self.answerImage.alpha = CGFloat(1.0), completion: nil)
+////            UIView.animate(withDuration: 2.0, delay: 1.0, options: [.curveEaseIn],animations: self.answerImage.alpha = CGFloat(1.0), completion: nil)
+            
+//                    answerImage.animation = "shake"
+//                    answerImage.curve = "easeInOut"
+//                    answerImage.duration = 1.0
+//                    answerImage.animate()
         } else if writeAnswer != quizArray[0].title{
-            answer.text = "不正解"
+            answerImage.image = UIImage(named:"false.png")
+            setAudioPlayer(soundName : "Quiz-Wrong_Buzzer02-1", type : "mp3")
+            audioPlayer1.play()
         }
         
         //解いた問題をquizArrayから取り除く
@@ -136,7 +156,12 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
             self.photoTitle.text = ""
+            self.answerImage.image = nil
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+          photoTitle.frame.origin.y = originHeight
     }
     
     //セグエを準備（prepare）するときに呼ばれるメソッド
@@ -152,6 +177,19 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
+    //音楽ファイルを読み込む
+    func setAudioPlayer(soundName : String, type : String){
+        
+        let soundFilePeth = Bundle.main.path(forResource:soundName, ofType: type)!
+        let fileURL = URL(fileURLWithPath: soundFilePeth)
+        
+        do{
+            audioPlayer1 = try AVAudioPlayer(contentsOf: fileURL)
+        } catch {
+            print("音楽ファイルが読み込めませんでした")
+        }
+    
 
 
+}
 }

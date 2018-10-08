@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzW-Ck-oU2">
-                                <rect key="frame" x="117" y="544" width="181" height="67"/>
+                                <rect key="frame" x="117" y="593" width="181" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="こたえる"/>
                                 <connections>
@@ -89,7 +89,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G07-zS-YUa">
-                                <rect key="frame" x="57" y="100" width="300" height="300"/>
+                                <rect key="frame" x="57" y="158" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
@@ -103,18 +103,45 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="化合物の名前" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="ka4-J7-rmj">
-                                <rect key="frame" x="83" y="450" width="248" height="52"/>
+                                <rect key="frame" x="86" y="533" width="248" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zgw-Jp-b0X">
+                                <rect key="frame" x="91" y="248" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="現在" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW3-zX-meo">
+                                <rect key="frame" x="131" y="98" width="69" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="問正解" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZp-Y2-wqE">
+                                <rect key="frame" x="246" y="106" width="148" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he7-zF-Ud5">
+                                <rect key="frame" x="176" y="81" width="63" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Tkd-CE-l7k"/>
                     </view>
                     <connections>
                         <outlet property="answer" destination="Oe3-v4-yUC" id="BBM-c8-o10"/>
+                        <outlet property="answerImage" destination="zgw-Jp-b0X" id="v2h-Gb-ydO"/>
+                        <outlet property="label" destination="he7-zF-Ud5" id="jZz-1c-4IC"/>
                         <outlet property="photoImage" destination="G07-zS-YUa" id="efV-Mr-pKU"/>
                         <outlet property="photoTitle" destination="ka4-J7-rmj" id="SKK-eA-3mf"/>
                         <segue destination="XtT-Xm-m3A" kind="show" identifier="toResultView" id="NXN-JJ-WS7"/>
@@ -122,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZv-JS-W1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1445" y="-642"/>
+            <point key="canvasLocation" x="1444.9275362318842" y="-642.39130434782612"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="pw3-hv-AVK">
@@ -231,6 +258,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qui-5A-Xoa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2561" y="152"/>
+        </scene>
+        <!--作る-->
+        <scene sceneID="wFS-qg-oX1">
+            <objects>
+                <viewController id="fuA-OG-hqi" customClass="OneWordViewController" customModule="Yukitoru" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dAN-ye-BM8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHC-BN-alm">
+                                <rect key="frame" x="0.0" y="63" width="414" height="396"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50259394879999997" green="1" blue="0.79894213059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ7-cp-p5f">
+                                <rect key="frame" x="71" y="467" width="93" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="撮る"/>
+                                <connections>
+                                    <action selector="useCamera:" destination="fuA-OG-hqi" eventType="touchUpInside" id="MC9-Sp-UzU"/>
+                                    <action selector="useCamera:" destination="zeE-Pp-R5a" eventType="touchUpInside" id="z2T-ie-H2u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-u2-Cu3">
+                                <rect key="frame" x="248" y="451" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="アルバム"/>
+                                <connections>
+                                    <action selector="openAlbum:" destination="fuA-OG-hqi" eventType="touchUpInside" id="Oy2-S0-hcb"/>
+                                    <action selector="openAlbum:" destination="zeE-Pp-R5a" eventType="touchUpInside" id="b5Z-uJ-Byj"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名前" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rse-70-lFj">
+                                <rect key="frame" x="71" y="536" width="286" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n41-8g-sG0">
+                                <rect key="frame" x="117" y="595" width="181" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="問題として登録"/>
+                                <connections>
+                                    <action selector="answer:" destination="uMk-xC-cuF" eventType="touchUpInside" id="cpo-Fd-tDh"/>
+                                    <action selector="savePhoto:" destination="zeE-Pp-R5a" eventType="touchUpInside" id="SSj-50-HOz"/>
+                                    <action selector="savePhoto:" destination="fuA-OG-hqi" eventType="touchUpInside" id="eQj-6p-j8Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RTe-wn-Kxw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="作る" image="あお.png" id="men-Wb-dzI"/>
+                    <connections>
+                        <outlet property="photoImage" destination="sHC-BN-alm" id="GS0-DG-3au"/>
+                        <outlet property="textField" destination="rse-70-lFj" id="4oZ-MI-9q6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7N-dA-X3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-881.15942028985512" y="2004.6195652173915"/>
         </scene>
         <!--解く-->
         <scene sceneID="MEE-Hz-x4L">
@@ -405,6 +494,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="ZNL-nX-4Dn" kind="relationship" relationship="viewControllers" id="hox-JN-t41"/>
+                        <segue destination="fuA-OG-hqi" kind="relationship" relationship="viewControllers" id="hhj-Ie-HDK"/>
                         <segue destination="sG5-88-el0" kind="relationship" relationship="viewControllers" id="iLo-D8-1Cn"/>
                         <segue destination="uHi-OK-tuX" kind="relationship" relationship="viewControllers" id="Qcc-08-6q4"/>
                     </connections>
@@ -413,11 +503,11 @@
             </objects>
             <point key="canvasLocation" x="-2204" y="39"/>
         </scene>
-        <!--作る-->
+        <!--一覧-->
         <scene sceneID="Ps7-M6-GsH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sG5-88-el0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="作る" image="あお.png" id="6Ku-gC-cQ1"/>
+                    <tabBarItem key="tabBarItem" title="一覧" image="あお.png" id="6Ku-gC-cQ1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6lI-ZL-eYi">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>

@@ -10,6 +10,21 @@
 		4C2E047F680AF1E111ACB370 /* Pods_YukitoruTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C336470EC0E2120221006D91 /* Pods_YukitoruTests.framework */; };
 		9781F7B3F4581AD469EA3483 /* Pods_Yukitoru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEFAC808AAEC294FE56A0C1 /* Pods_Yukitoru.framework */; };
 		EE2B03E12169F47700A54A9D /* 青 250.png in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03E02169F47700A54A9D /* 青 250.png */; };
+		EE2B03E3216AB98E00A54A9D /* false.png in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03E2216AB98C00A54A9D /* false.png */; };
+		EE2B03E5216AB9A000A54A9D /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03E4216AB99F00A54A9D /* true.png */; };
+		EE2B03E7216AC29D00A54A9D /* OneWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B03E6216AC29D00A54A9D /* OneWordViewController.swift */; };
+		EE2B03EF216ADE7D00A54A9D /* license.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03E9216ADE7D00A54A9D /* license.pdf */; };
+		EE2B03F0216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03EA216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-1.mp3 */; };
+		EE2B03F1216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03EB216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-3.mp3 */; };
+		EE2B03F2216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03EC216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-2.mp3 */; };
+		EE2B03F3216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03ED216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-5.mp3 */; };
+		EE2B03F4216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03EE216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-4.mp3 */; };
+		EE2B03FB216ADE8300A54A9D /* license.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03F6216ADE8200A54A9D /* license.pdf */; };
+		EE2B03FC216ADE8300A54A9D /* Quiz-Correct_Answer02-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03F7216ADE8200A54A9D /* Quiz-Correct_Answer02-2.mp3 */; };
+		EE2B03FD216ADE8300A54A9D /* Quiz-Correct_Answer02-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03F8216ADE8200A54A9D /* Quiz-Correct_Answer02-3.mp3 */; };
+		EE2B03FE216ADE8300A54A9D /* Quiz-Correct_Answer02-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03F9216ADE8200A54A9D /* Quiz-Correct_Answer02-1.mp3 */; };
+		EE2B03FF216ADE8300A54A9D /* Quiz-Correct_Answer02-4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE2B03FA216ADE8200A54A9D /* Quiz-Correct_Answer02-4.mp3 */; };
+		EE2B0401216AE8AA00A54A9D /* スクリーンショット 2018-10-08 10.13.14.png in Resources */ = {isa = PBXBuildFile; fileRef = EE2B0400216AE8AA00A54A9D /* スクリーンショット 2018-10-08 10.13.14.png */; };
 		EE84AF59215B862B00BBD5C1 /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84AF58215B862B00BBD5C1 /* imageViewController.swift */; };
 		EE84AF5B215B863F00BBD5C1 /* quizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */; };
 		EE84AF5D215B864C00BBD5C1 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */; };
@@ -59,6 +74,21 @@
 		C336470EC0E2120221006D91 /* Pods_YukitoruTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukitoruTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62D8C77779BA2DD25970B39 /* Pods-Yukitoru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yukitoru.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yukitoru/Pods-Yukitoru.release.xcconfig"; sourceTree = "<group>"; };
 		EE2B03E02169F47700A54A9D /* 青 250.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "青 250.png"; sourceTree = "<group>"; };
+		EE2B03E2216AB98C00A54A9D /* false.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = false.png; sourceTree = "<group>"; };
+		EE2B03E4216AB99F00A54A9D /* true.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true.png; sourceTree = "<group>"; };
+		EE2B03E6216AC29D00A54A9D /* OneWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordViewController.swift; sourceTree = "<group>"; };
+		EE2B03E9216ADE7D00A54A9D /* license.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = license.pdf; sourceTree = "<group>"; };
+		EE2B03EA216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quiz-Wrong_Buzzer02-1.mp3"; sourceTree = "<group>"; };
+		EE2B03EB216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quiz-Wrong_Buzzer02-3.mp3"; sourceTree = "<group>"; };
+		EE2B03EC216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quiz-Wrong_Buzzer02-2.mp3"; sourceTree = "<group>"; };
+		EE2B03ED216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quiz-Wrong_Buzzer02-5.mp3"; sourceTree = "<group>"; };
+		EE2B03EE216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quiz-Wrong_Buzzer02-4.mp3"; sourceTree = "<group>"; };
+		EE2B03F6216ADE8200A54A9D /* license.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = license.pdf; sourceTree = "<group>"; };
+		EE2B03F7216ADE8200A54A9D /* Quiz-Correct_Answer02-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quiz-Correct_Answer02-2.mp3"; sourceTree = "<group>"; };
+		EE2B03F8216ADE8200A54A9D /* Quiz-Correct_Answer02-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quiz-Correct_Answer02-3.mp3"; sourceTree = "<group>"; };
+		EE2B03F9216ADE8200A54A9D /* Quiz-Correct_Answer02-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quiz-Correct_Answer02-1.mp3"; sourceTree = "<group>"; };
+		EE2B03FA216ADE8200A54A9D /* Quiz-Correct_Answer02-4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quiz-Correct_Answer02-4.mp3"; sourceTree = "<group>"; };
+		EE2B0400216AE8AA00A54A9D /* スクリーンショット 2018-10-08 10.13.14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2018-10-08 10.13.14.png"; sourceTree = "<group>"; };
 		EE84AF58215B862B00BBD5C1 /* imageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
 		EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizViewController.swift; sourceTree = "<group>"; };
 		EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +170,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EE2B03E8216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				EE2B03F5216ADE8200A54A9D /* Quiz-Correct_Answer02-mp3 */,
+				EE2B03E9216ADE7D00A54A9D /* license.pdf */,
+				EE2B03EA216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-1.mp3 */,
+				EE2B03EB216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-3.mp3 */,
+				EE2B03EC216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-2.mp3 */,
+				EE2B03ED216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-5.mp3 */,
+				EE2B03EE216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-4.mp3 */,
+				EE2B0400216AE8AA00A54A9D /* スクリーンショット 2018-10-08 10.13.14.png */,
+			);
+			path = "Quiz-Wrong_Buzzer02-mp3";
+			sourceTree = "<group>";
+		};
+		EE2B03F5216ADE8200A54A9D /* Quiz-Correct_Answer02-mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				EE2B03F6216ADE8200A54A9D /* license.pdf */,
+				EE2B03F7216ADE8200A54A9D /* Quiz-Correct_Answer02-2.mp3 */,
+				EE2B03F8216ADE8200A54A9D /* Quiz-Correct_Answer02-3.mp3 */,
+				EE2B03F9216ADE8200A54A9D /* Quiz-Correct_Answer02-1.mp3 */,
+				EE2B03FA216ADE8200A54A9D /* Quiz-Correct_Answer02-4.mp3 */,
+			);
+			path = "Quiz-Correct_Answer02-mp3";
+			sourceTree = "<group>";
+		};
 		EEC7C6FE215B686500CDAEC7 = {
 			isa = PBXGroup;
 			children = (
@@ -173,9 +230,12 @@
 				EEC7C711215B686900CDAEC7 /* Assets.xcassets */,
 				EEC7C713215B686900CDAEC7 /* LaunchScreen.storyboard */,
 				EEC7C716215B686900CDAEC7 /* Info.plist */,
+				EE2B03E8216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-mp3 */,
 				EEFF9D732169EF3F0055C81D /* あお.png */,
 				EE2B03E02169F47700A54A9D /* 青 250.png */,
 				EEFF9D672169E7A90055C81D /* オレンジ.png */,
+				EE2B03E2216AB98C00A54A9D /* false.png */,
+				EE2B03E4216AB99F00A54A9D /* true.png */,
 				EEFF9D692169E7A90055C81D /* ピンク.png */,
 				EEFF9D6F2169EC700055C81D /* OriginalTabBarController.swift */,
 			);
@@ -203,6 +263,7 @@
 		EEFF9D5C2169C0120055C81D /* 単語帳を作る */ = {
 			isa = PBXGroup;
 			children = (
+				EE2B03E6216AC29D00A54A9D /* OneWordViewController.swift */,
 				EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */,
 				EECF51552161C05300194099 /* RealmData.swift */,
 				EE84AF58215B862B00BBD5C1 /* imageViewController.swift */,
@@ -339,13 +400,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE2B03F2216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-2.mp3 in Resources */,
+				EE2B03F3216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-5.mp3 in Resources */,
 				EEC7C715215B686900CDAEC7 /* LaunchScreen.storyboard in Resources */,
+				EE2B03EF216ADE7D00A54A9D /* license.pdf in Resources */,
+				EE2B03FF216ADE8300A54A9D /* Quiz-Correct_Answer02-4.mp3 in Resources */,
+				EE2B03FE216ADE8300A54A9D /* Quiz-Correct_Answer02-1.mp3 in Resources */,
+				EE2B03E5216AB9A000A54A9D /* true.png in Resources */,
+				EE2B03FD216ADE8300A54A9D /* Quiz-Correct_Answer02-3.mp3 in Resources */,
+				EE2B03F1216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-3.mp3 in Resources */,
 				EEFF9D1F2164BA4A0055C81D /* GoogleService-Info.plist in Resources */,
+				EE2B0401216AE8AA00A54A9D /* スクリーンショット 2018-10-08 10.13.14.png in Resources */,
 				EEC7C712215B686900CDAEC7 /* Assets.xcassets in Resources */,
+				EE2B03E3216AB98E00A54A9D /* false.png in Resources */,
 				EEFF9D6A2169E7AA0055C81D /* オレンジ.png in Resources */,
+				EE2B03FB216ADE8300A54A9D /* license.pdf in Resources */,
+				EE2B03F0216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-1.mp3 in Resources */,
 				EE2B03E12169F47700A54A9D /* 青 250.png in Resources */,
+				EE2B03FC216ADE8300A54A9D /* Quiz-Correct_Answer02-2.mp3 in Resources */,
 				EEFF9D6C2169E7AA0055C81D /* ピンク.png in Resources */,
 				EEFF9D742169EF3F0055C81D /* あお.png in Resources */,
+				EE2B03F4216ADE7D00A54A9D /* Quiz-Wrong_Buzzer02-4.mp3 in Resources */,
 				EEC7C710215B686500CDAEC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +556,7 @@
 				EEFF9D662169C14F0055C81D /* AllWordListViewController.swift in Sources */,
 				EEFF9D642169C1380055C81D /* CreatMyWordViewController.swift in Sources */,
 				EEFF9D602169C0AE0055C81D /* MyWordViewController.swift in Sources */,
+				EE2B03E7216AC29D00A54A9D /* OneWordViewController.swift in Sources */,
 				EEFF9D702169EC700055C81D /* OriginalTabBarController.swift in Sources */,
 				EEC7C70B215B686500CDAEC7 /* AppDelegate.swift in Sources */,
 				EEFF9D622169C0D30055C81D /* WordListViewController.swift in Sources */,

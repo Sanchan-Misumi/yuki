@@ -11,7 +11,7 @@ import Spring
 class ViewController: UIViewController {
 
     @IBOutlet var bigButtom: SpringButton!
-    @IBOutlet weak var smallButtom: SpringButton!
+    @IBOutlet var smallButtom: SpringButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
