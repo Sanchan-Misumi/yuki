@@ -236,8 +236,8 @@
                                     <action selector="savePhoto:" destination="fuA-OG-hqi" eventType="touchUpInside" id="eQj-6p-j8Z"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-82-ZmC">
-                                <rect key="frame" x="108" y="564" width="198" height="78"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8S4-cU-NSf">
+                                <rect key="frame" x="61" y="536" width="293" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
@@ -247,13 +247,13 @@
                     <tabBarItem key="tabBarItem" title="作る" image="あお.png" id="men-Wb-dzI"/>
                     <connections>
                         <outlet property="photoImage" destination="sHC-BN-alm" id="GS0-DG-3au"/>
-                        <outlet property="pickerView" destination="Bgx-82-ZmC" id="ib0-SQ-D8e"/>
+                        <outlet property="pickerView" destination="8S4-cU-NSf" id="umv-Ts-euF"/>
                         <outlet property="textField" destination="rse-70-lFj" id="4oZ-MI-9q6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7N-dA-X3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1090" y="2004"/>
+            <point key="canvasLocation" x="-1091.304347826087" y="2003.8043478260872"/>
         </scene>
         <!--解く-->
         <scene sceneID="MEE-Hz-x4L">
