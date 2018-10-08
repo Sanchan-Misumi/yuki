@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var bigButtom: SpringButton!
     @IBOutlet var smallButtom: SpringButton!
+    @IBOutlet var label: SpringLabel!
+    @IBOutlet var label0: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,14 @@ class ViewController: UIViewController {
         smallButtom.curve = "easeInOut"
         smallButtom.duration = 5.0
         smallButtom.animate()
+        
+        label.animation = "fadeInUp"
+        label.curve = "easeInOut"
+        label.duration = 5.0
+        label.animate()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
+            self.label0.text = "解く"
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -36,6 +46,16 @@ class ViewController: UIViewController {
         smallButtom.curve = "easeInOut"
         smallButtom.duration = 10.0
         smallButtom.animate()
+        
+        label.animation = "fadeInUp"
+        label.curve = "easeInOut"
+        label.duration = 10.0
+        label.animate()
+        
+        label.animation = "shake"
+        label.curve = "easeInOut"
+        label.duration = 10.0
+        label.animate()
     }
     func performSegueToQuiz(){
         performSegue(withIdentifier: "toQuizViewController", sender: nil)

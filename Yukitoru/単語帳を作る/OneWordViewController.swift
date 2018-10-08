@@ -17,14 +17,18 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     let SCREEN_SIZE = UIScreen.main.bounds.size
     var originHeight: CGFloat = 0.0
-    @IBOutlet weak var photoImage: UIImageView!
+    @IBOutlet var photoImage: UIImageView!
     @IBOutlet var textField: UITextField!
-    
-    @IBOutlet var pickerView: UIPickerView!
     //インスタンス変数
     //    var fireBase: DatabaseReference!
     
-    
+    @IBOutlet var pickerView: UIPickerView! {
+        didSet {
+            pickerView.delegate = self
+            pickerView.dataSource = self
+            pickerView.reloadAllComponents()
+        }
+    }
     // デフォルトのファイルを利用する初期化
     let realm = try! Realm()
     let imageAndTitle = RealmData()
@@ -47,6 +51,10 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
         wordListArray = realm.objects(RealmWords.self).map{$0}
         print("pickercontrollerで呼ばれるはずのwordListArrayには\(String(describing: wordListArray))が入っています")
 //        onlyWordArray = wordListArray
+        
+        //imageViewの角を丸くするコード
+        photoImage.layer.cornerRadius = photoImage.frame.size.width * 0.1
+        photoImage.clipsToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

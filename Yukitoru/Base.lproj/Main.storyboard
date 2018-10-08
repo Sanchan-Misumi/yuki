@@ -54,6 +54,13 @@
                                     <action selector="smallButtom2" destination="BYZ-38-t0r" eventType="touchUpInside" id="7la-9g-4SP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-mT-Fe1" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="186" y="358" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -61,6 +68,8 @@
                     <navigationItem key="navigationItem" id="k2S-yd-b4I"/>
                     <connections>
                         <outlet property="bigButtom" destination="3wC-lU-Iqr" id="rty-Qy-2X4"/>
+                        <outlet property="label" destination="cdi-mT-Fe1" id="7fY-rz-Gdz"/>
+                        <outlet property="label0" destination="cdi-mT-Fe1" id="zlB-pw-UGj"/>
                         <outlet property="smallButtom" destination="yrw-Kx-BR3" id="kDz-lK-lGc"/>
                         <segue destination="uMk-xC-cuF" kind="show" identifier="toQuizViewController" id="azI-p7-wNb"/>
                     </connections>
@@ -199,13 +208,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHC-BN-alm">
-                                <rect key="frame" x="0.0" y="63" width="414" height="396"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.50259394879999997" green="1" blue="0.79894213059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ7-cp-p5f">
-                                <rect key="frame" x="71" y="451" width="93" height="61"/>
+                                <rect key="frame" x="71" y="389" width="93" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="撮る"/>
                                 <connections>
@@ -213,7 +217,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-u2-Cu3">
-                                <rect key="frame" x="252" y="435" width="93" height="93"/>
+                                <rect key="frame" x="234" y="373" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="アルバム"/>
                                 <connections>
@@ -221,7 +225,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名前" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rse-70-lFj">
-                                <rect key="frame" x="71" y="514" width="286" height="30"/>
+                                <rect key="frame" x="71" y="458" width="286" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -236,8 +240,16 @@
                                     <action selector="savePhoto:" destination="fuA-OG-hqi" eventType="touchUpInside" id="eQj-6p-j8Z"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLb-GN-BD1">
+                                <rect key="frame" x="54" y="65" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.98823529409999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8S4-cU-NSf">
-                                <rect key="frame" x="61" y="536" width="293" height="120"/>
+                                <rect key="frame" x="54" y="508" width="293" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
@@ -246,7 +258,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="作る" image="あお.png" id="men-Wb-dzI"/>
                     <connections>
-                        <outlet property="photoImage" destination="sHC-BN-alm" id="GS0-DG-3au"/>
+                        <outlet property="photoImage" destination="xLb-GN-BD1" id="eRT-Sr-JlI"/>
                         <outlet property="pickerView" destination="8S4-cU-NSf" id="umv-Ts-euF"/>
                         <outlet property="textField" destination="rse-70-lFj" id="4oZ-MI-9q6"/>
                     </connections>

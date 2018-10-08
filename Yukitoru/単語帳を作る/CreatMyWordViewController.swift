@@ -22,7 +22,7 @@ class CreatMyWordViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         //一次的に問題をrealmDataArrayに格納する
         wordListNameTextField.delegate = self
-        // Do any additional setup after loading the view.
+   
     }
     
     @IBAction func save(_ sender: Any) {
@@ -35,6 +35,7 @@ class CreatMyWordViewController: UIViewController,UITextFieldDelegate {
             realm.add(onlyWord)
         }
         }
+        navigationController?.popViewController(animated: Bool.init())
     }
     
     
