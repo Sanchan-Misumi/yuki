@@ -37,9 +37,6 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.delegate = self
-        pickerView.delegate = self
-        pickerView.dataSource = self
         //インスタンスを作成
         //        fireBase = Database.database().reference()
         
@@ -58,8 +55,8 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        wordListArray = realm.objects(RealmWords.self).map{$0}
-        self.loadView()
+//        wordListArray = realm.objects(RealmWords.self).map{$0}
+//        self.loadView()
     }
     //UIKeyboardWillShow通知を受けて、実行される関数
     @objc func keyboardWillShow(_ notification: NSNotification){

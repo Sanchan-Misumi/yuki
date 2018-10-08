@@ -394,7 +394,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="PfS-HJ-OTb" id="5Uh-rl-7PD"/>
-                        <segue destination="S2C-55-fHG" kind="show" id="tqQ-wk-KXJ"/>
+                        <segue destination="S2C-55-fHG" kind="show" identifier="toWordList" id="tqQ-wk-KXJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RN8-qE-mDP" userLabel="First Responder" sceneMemberID="firstResponder"/>

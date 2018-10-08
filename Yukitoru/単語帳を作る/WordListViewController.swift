@@ -13,7 +13,11 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
     let realm = try! Realm()
     
     var realmDataArray: Array<RealmData>!
+    var wordName: String!
     let imageAndTitle = RealmData()
+    var allArray = [String(),Data()] as [Any]
+    var titleArray = [String()]
+    var imageArray = [Data()]
 
     @IBOutlet var table: UITableView!{
         didSet{
@@ -24,21 +28,33 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         realmDataArray = realm.objects(RealmData.self).map{$0}
+        for i in realmDataArray {
+        if wordName == imageAndTitle.wordListName{
+//            allArray.append(contentsOf: "\(imageAndTitle.title)","\(imageAndTitle.photoImageData)")
+            titleArray.append(imageAndTitle.title)
+            imageArray.append(imageAndTitle.photoImageData)
+            print("wordListViewControllerでwordNameに入っているのは\(String(describing: wordName))です")
+            print("wordListViewControllerでtitleArrayに入っているのは\(titleArray)です")
+            print("wordListViewControllerでimageArrayに入っているのは\(imageArray)です")
+//            allArray.append(contentsOf: [(imageAndTitle.title),(imageAndTitle.photoImageData)])
+        }
+        }
 
-          realmDataArray = realm.objects(RealmData.self).map{$0}
+        
         // Do any additional setup after loading the view.
          
     }
     
     //tableViewの数を指定するコード
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return realmDataArray.count
+         return titleArray.count
     }
     
     //tableViewに表示させるものを指定するコード
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = realmDataArray[indexPath.row].wordListName
+        cell?.textLabel?.text = titleArray[indexPath.row]
         
         return cell!
     }
@@ -50,7 +66,8 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
     //delete機能をつけるためのコード
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
                 if editingStyle == .delete {
-                    realmDataArray.remove(at: indexPath.row)
+                    titleArray.remove(at: indexPath.row)
+                    imageArray.remove(at: indexPath.row)
                     table.deleteRows(at: [indexPath], with: .fade)
                 }
         

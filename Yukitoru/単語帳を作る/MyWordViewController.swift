@@ -16,12 +16,17 @@ class MyWordViewController: UIViewController,UITableViewDataSource,UITableViewDe
     var wordArray: Array<RealmWords>!
    
     let onlyWord = RealmWords()
+    var wordName: String = ""
     
     @IBOutlet var table: UITableView!{
         didSet{
             table.dataSource = self
             table.delegate = self
         }
+    }
+    
+    func performSegueToWordList(){
+        performSegue(withIdentifier: "toWordList", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -51,7 +56,8 @@ class MyWordViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     //tableViewを触った時に動くコード
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        wordName = wordArray[indexPath.row].word
+        performSegueToWordList()
     }
     
     
@@ -66,6 +72,16 @@ class MyWordViewController: UIViewController,UITableViewDataSource,UITableViewDe
         }
         
     }
+    
+    //セグエを準備（prepare）するときに呼ばれるメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toWordList" {
+            let WordListViewController = segue.destination as! WordListViewController
+            WordListViewController.wordName = self.wordName
+            print("MyWordViewControllerでwordNameに入っているのは\(wordName)です")
+        }
+    }
+
 
     /*
     // MARK: - Navigation
