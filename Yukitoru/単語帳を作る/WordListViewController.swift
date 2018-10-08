@@ -27,6 +27,7 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
 
           realmDataArray = realm.objects(RealmData.self).map{$0}
         // Do any additional setup after loading the view.
+         
     }
     
     //tableViewの数を指定するコード
@@ -37,7 +38,7 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
     //tableViewに表示させるものを指定するコード
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = realmDataArray[indexPath.row].title
+        cell?.textLabel?.text = realmDataArray[indexPath.row].wordListName
         
         return cell!
     }

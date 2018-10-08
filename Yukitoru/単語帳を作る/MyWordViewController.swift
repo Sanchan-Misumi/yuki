@@ -13,8 +13,8 @@ class MyWordViewController: UIViewController,UITableViewDataSource,UITableViewDe
 
     let realm = try! Realm()
     
-    var realmDataArray: Array<RealmData>!
-    let imageAndTitle = RealmData()
+    var wordArray: Array<RealmWords>!
+    let onlyWord = RealmWords()
     
     @IBOutlet var table: UITableView!{
         didSet{
@@ -25,20 +25,25 @@ class MyWordViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        realmDataArray = realm.objects(RealmData.self).map{$0}
+        wordArray = realm.objects(RealmWords.self).map{$0}
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        wordArray = realm.objects(RealmWords.self).map{$0}
+        self.loadView()
     }
     
     //tableViewの数を指定するコード
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return imageAndTitle.wordListName.count
+        return wordArray.count
     }
 
     //tableViewに表示させるものを指定するコード
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = imageAndTitle.wordListName
+        cell?.textLabel?.text = wordArray[indexPath.row].word
         
         return cell!
     }
@@ -46,6 +51,19 @@ class MyWordViewController: UIViewController,UITableViewDataSource,UITableViewDe
     //tableViewを触った時に動くコード
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            wordArray.remove(at: indexPath.row)
+            table.deleteRows(at: [indexPath], with: .fade)
+            
+            try! realm.write{
+                realm.delete(wordArray)
+            }
+        }
+        
     }
 
     /*

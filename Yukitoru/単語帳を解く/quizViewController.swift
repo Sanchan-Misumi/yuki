@@ -19,6 +19,7 @@ class quizViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var photoImage: UIImageView!
     @IBOutlet var photoTitle: UITextField!
     @IBOutlet var answerImage: UIImageView!
+    @IBOutlet var springImage: SpringImageView!
     
     //結果を表示させるラベル
     @IBOutlet var label: UILabel!
@@ -131,28 +132,37 @@ class quizViewController: UIViewController,UITextFieldDelegate {
             answerImage.image = UIImage(named: "true.png")
             setAudioPlayer(soundName : "Quiz-Correct_Answer02-2", type : "mp3")
             audioPlayer1.play()
-//            answerImage.alpha = 0.0
-//            UIView.animate(withDuration: 2.0, animations: self.answerImage.alpha = CGFloat(1.0), completion: nil)
-////            UIView.animate(withDuration: 2.0, delay: 1.0, options: [.curveEaseIn],animations: self.answerImage.alpha = CGFloat(1.0), completion: nil)
-//                    answerImage.animation = "shake"
-//                    answerImage.curve = "easeInOut"
-//                    answerImage.duration = 1.0
-//                    answerImage.animate()
+            
+            springImage.animation = "fadeInUp"
+            springImage.curve = "easeInOut"
+            springImage.duration = 1.0
+            springImage.animate()
         } else if writeAnswer != quizArray[0].title{
             answerImage.image = UIImage(named:"false.png")
             setAudioPlayer(soundName : "Quiz-Wrong_Buzzer02-1", type : "mp3")
             audioPlayer1.play()
             self.photoTitle.text = self.quizArray[0].title
             self.photoTitle.textColor = UIColor.red
+            springImage.animation = "fadeInUp"
+            springImage.curve = "easeInOut"
+            springImage.duration = 1.0
+            springImage.animate()
         }
+        
+        //解いた問題をquizArrayから取り除く
+        quizArray.remove(at: 0)
         
         //解いた問題数の合計値があらかじめ設定していた問題数に達したら結果画面へ
         if quizArray.count == 0 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
             performSegueToResult()
+            }
         } else {
-            setPhotoAndTitle()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
+            self.setPhotoAndTitle()
+            }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
         
                 self.photoTitle.text = ""
             self.answerImage.image = nil
@@ -160,8 +170,6 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         }
         label.text = String(correctAnswer)
         
-        //解いた問題をquizArrayから取り除く
-        quizArray.remove(at: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {

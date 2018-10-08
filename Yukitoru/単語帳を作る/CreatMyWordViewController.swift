@@ -14,26 +14,26 @@ class CreatMyWordViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var wordListNameTextField: UITextField!
     
     let realm = try! Realm()
-    
-    var realmDataArray: Array<RealmData>!
-    let imageAndTitle = RealmData()
+    let onlyWord = RealmWords()
     
     var wordList: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //一次的に問題をrealmDataArrayに格納する
-        realmDataArray = realm.objects(RealmData.self).map{$0}
         wordListNameTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
     @IBAction func save(_ sender: Any) {
+        if wordListNameTextField.text != ""{
         wordList = (wordListNameTextField.text)!
-        imageAndTitle.wordListName = wordList
-        print("新しく登録した単語帳の名前は\(imageAndTitle.wordListName)です")
+       onlyWord.word = wordList
+        print("新しく登録した単語帳の名前は\(onlyWord.word)です")
         
         try! realm.write{
-            realm.add(imageAndTitle)
+            realm.add(onlyWord)
+        }
         }
     }
     
@@ -42,6 +42,7 @@ class CreatMyWordViewController: UIViewController,UITextFieldDelegate {
         wordListNameTextField.resignFirstResponder()
         return true
     }
+    
     
     /*
     // MARK: - Navigation

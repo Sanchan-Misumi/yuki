@@ -38,6 +38,7 @@
 		EEC7C720215B686900CDAEC7 /* YukitoruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7C71F215B686900CDAEC7 /* YukitoruTests.swift */; };
 		EEC7C72B215B686900CDAEC7 /* YukitoruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7C72A215B686900CDAEC7 /* YukitoruUITests.swift */; };
 		EECF51562161C05300194099 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF51552161C05300194099 /* RealmData.swift */; };
+		EED966C7216B2965002D9711 /* RealmWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED966C6216B2965002D9711 /* RealmWords.swift */; };
 		EEFF9D1F2164BA4A0055C81D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */; };
 		EEFF9D602169C0AE0055C81D /* MyWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF9D5F2169C0AE0055C81D /* MyWordViewController.swift */; };
 		EEFF9D622169C0D30055C81D /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF9D612169C0D30055C81D /* WordListViewController.swift */; };
@@ -110,6 +111,7 @@
 		EEC7C72A215B686900CDAEC7 /* YukitoruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YukitoruUITests.swift; sourceTree = "<group>"; };
 		EEC7C72C215B686900CDAEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EECF51552161C05300194099 /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
+		EED966C6216B2965002D9711 /* RealmWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmWords.swift; sourceTree = "<group>"; };
 		EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEFF9D5F2169C0AE0055C81D /* MyWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWordViewController.swift; sourceTree = "<group>"; };
 		EEFF9D612169C0D30055C81D /* WordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
@@ -269,12 +271,13 @@
 		EEFF9D5C2169C0120055C81D /* 単語帳を作る */ = {
 			isa = PBXGroup;
 			children = (
-				EE2B03E6216AC29D00A54A9D /* OneWordViewController.swift */,
 				EEFF9D1E2164BA4A0055C81D /* GoogleService-Info.plist */,
 				EECF51552161C05300194099 /* RealmData.swift */,
+				EED966C6216B2965002D9711 /* RealmWords.swift */,
 				EE84AF58215B862B00BBD5C1 /* imageViewController.swift */,
 				EEFF9D612169C0D30055C81D /* WordListViewController.swift */,
 				EEFF9D5F2169C0AE0055C81D /* MyWordViewController.swift */,
+				EE2B03E6216AC29D00A54A9D /* OneWordViewController.swift */,
 				EEFF9D632169C1380055C81D /* CreatMyWordViewController.swift */,
 			);
 			path = "単語帳を作る";
@@ -561,6 +564,7 @@
 				EE84AF59215B862B00BBD5C1 /* imageViewController.swift in Sources */,
 				EEC7C70D215B686500CDAEC7 /* ViewController.swift in Sources */,
 				EEFF9D662169C14F0055C81D /* AllWordListViewController.swift in Sources */,
+				EED966C7216B2965002D9711 /* RealmWords.swift in Sources */,
 				EEFF9D642169C1380055C81D /* CreatMyWordViewController.swift in Sources */,
 				EEFF9D602169C0AE0055C81D /* MyWordViewController.swift in Sources */,
 				EE2B03E7216AC29D00A54A9D /* OneWordViewController.swift in Sources */,

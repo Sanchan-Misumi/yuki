@@ -13,13 +13,14 @@ import Firebase
 //import FirebaseDatabase
 //import FirebaseStorage
 
-class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
+class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
     
     let SCREEN_SIZE = UIScreen.main.bounds.size
     var originHeight: CGFloat = 0.0
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet var textField: UITextField!
     
+    @IBOutlet var wordList: UIPickerView!
     //インスタンス変数
     //    var fireBase: DatabaseReference!
     
@@ -28,10 +29,14 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     let realm = try! Realm()
     let imageAndTitle = RealmData()
     
+     var wordListArray: Array<RealmWords>!
+     let onlyWord = RealmWords()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+        wordList.delegate = self
+        wordList.dataSource = self
         //インスタンスを作成
         //        fireBase = Database.database().reference()
         
@@ -39,7 +44,8 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
         //ここでUIKeyboardWillShowという名前の通知のイベントをオブザーバー登録をしている
         NotificationCenter.default.addObserver(self, selector: #selector(quizViewController.keyboardWillHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
         originHeight =  textField.frame.origin.y
-        
+    
+        wordListArray = realm.objects(RealmWords.self).map{$0}
     }
     
     //UIKeyboardWillShow通知を受けて、実行される関数
@@ -95,7 +101,6 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let _image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             photoImage.image = _image
@@ -148,5 +153,27 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
         })
     }
     
+    //UIPickerViewの列の数
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    //UIPickerViewの行数、リストの数
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return wordListArray.count
+    }
+    
+    //UIPickerViewの最初の表示
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return wordListArray[row]
+    }
+    
+    //UIPickerViewのRowが選択された時の挙動
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        imageAndTitle.wordListName = wordListArray[row]
+    }
+    
+    
+    //
 }
 
