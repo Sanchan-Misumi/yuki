@@ -20,7 +20,7 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet var textField: UITextField!
     
-    @IBOutlet var wordList: UIPickerView!
+    @IBOutlet var pickerView: UIPickerView!
     //インスタンス変数
     //    var fireBase: DatabaseReference!
     
@@ -28,15 +28,14 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     // デフォルトのファイルを利用する初期化
     let realm = try! Realm()
     let imageAndTitle = RealmData()
-    
-     var wordListArray: Array<RealmWords>!
-     let onlyWord = RealmWords()
+    var wordListArray: Array<RealmWords>!
+    var onlyWordArray = [RealmWords]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
-        wordList.delegate = self
-        wordList.dataSource = self
+        pickerView.delegate = self
+        pickerView.dataSource = self
         //インスタンスを作成
         //        fireBase = Database.database().reference()
         
@@ -46,8 +45,14 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
         originHeight =  textField.frame.origin.y
     
         wordListArray = realm.objects(RealmWords.self).map{$0}
+        print("pickercontrollerで呼ばれるはずのwordListArrayには\(String(describing: wordListArray))が入っています")
+//        onlyWordArray = wordListArray
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        wordListArray = realm.objects(RealmWords.self).map{$0}
+        self.loadView()
+    }
     //UIKeyboardWillShow通知を受けて、実行される関数
     @objc func keyboardWillShow(_ notification: NSNotification){
         
@@ -138,11 +143,6 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
         //画像のアップロード
         let storage = Storage.storage()
         let storageRef = storage.reference()
-        //
-        //        let tango = Database.database().reference().child(<#T##pathString: String##String#>)
-        
-        //        let tango = Database.database().reference().child("users").child(user.uid).childByAutoId()
-        
         
         //データを保存
         let reference = storageRef.child("images/" + "1" + ".jpg")
@@ -160,17 +160,17 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //UIPickerViewの行数、リストの数
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return wordListArray.count
+        return onlyWordArray.count
     }
     
-    //UIPickerViewの最初の表示
+//    UIPickerViewの最初の表示
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return wordListArray[row]
+        return wordListArray[row].word
     }
     
-    //UIPickerViewのRowが選択された時の挙動
+//    UIPickerViewのRowが選択された時の挙動
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        imageAndTitle.wordListName = wordListArray[row]
+        imageAndTitle.wordListName = wordListArray[row].word
     }
     
     

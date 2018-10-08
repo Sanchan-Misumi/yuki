@@ -247,8 +247,8 @@
                     <tabBarItem key="tabBarItem" title="作る" image="あお.png" id="men-Wb-dzI"/>
                     <connections>
                         <outlet property="photoImage" destination="sHC-BN-alm" id="GS0-DG-3au"/>
+                        <outlet property="pickerView" destination="Bgx-82-ZmC" id="ib0-SQ-D8e"/>
                         <outlet property="textField" destination="rse-70-lFj" id="4oZ-MI-9q6"/>
-                        <outlet property="wordList" destination="Bgx-82-ZmC" id="7yB-0h-y8N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7N-dA-X3q" userLabel="First Responder" sceneMemberID="firstResponder"/>

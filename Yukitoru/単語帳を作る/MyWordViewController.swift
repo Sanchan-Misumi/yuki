@@ -14,6 +14,7 @@ class MyWordViewController: UIViewController,UITableViewDataSource,UITableViewDe
     let realm = try! Realm()
     
     var wordArray: Array<RealmWords>!
+   
     let onlyWord = RealmWords()
     
     @IBOutlet var table: UITableView!{
