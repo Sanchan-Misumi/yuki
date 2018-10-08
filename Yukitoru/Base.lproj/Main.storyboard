@@ -325,7 +325,6 @@
                                 <state key="normal" title="保存"/>
                                 <connections>
                                     <action selector="save:" destination="hqG-gG-uaz" eventType="touchUpInside" id="Jgs-75-zgk"/>
-                                    <segue destination="Eih-h1-qbI" kind="show" id="j4B-bd-iK9"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="新しい単語帳の名前" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ti-sR-1I8">
@@ -487,7 +486,4 @@
     <resources>
         <image name="あお.png" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="j4B-bd-iK9"/>
-    </inferredMetricsTieBreakers>
 </document>

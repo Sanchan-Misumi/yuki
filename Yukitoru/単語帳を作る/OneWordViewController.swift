@@ -160,7 +160,7 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //UIPickerViewの行数、リストの数
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return onlyWordArray.count
+        return wordListArray.count
     }
     
 //    UIPickerViewの最初の表示
