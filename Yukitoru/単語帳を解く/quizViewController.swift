@@ -19,8 +19,8 @@ class quizViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var photoImage: UIImageView!
     @IBOutlet var photoTitle: UITextField!
     @IBOutlet var answerImage: UIImageView!
+    
     //結果を表示させるラベル
-    @IBOutlet var answer: UILabel!
     @IBOutlet var label: UILabel!
     
     //正解数を数える
@@ -67,7 +67,10 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         //imageViewの角を丸くするコード
         photoImage.layer.cornerRadius = photoImage.frame.size.width * 0.1
         photoImage.clipsToBounds = true
-        
+        //photoTitleの角を丸くするコード
+//        photoTitle.layer.cornerRadius = photoTitle.frame.size.width * 0.1
+//        photoTitle.clipsToBounds = true
+//
         originHeight =  photoTitle.frame.origin.y
         
     }
@@ -97,7 +100,7 @@ class quizViewController: UIViewController,UITextFieldDelegate {
     
     //UIKeyboardWillShow通知を受けて、実行される関数
    @objc func keyboardWillHide(_ notification: NSNotification){
-//        photoTitle.frame.origin.y = SCREEN_SIZE.height - photoTitle.frame.height
+    photoTitle.frame.origin.y = originHeight
     }
     
     func setPhotoAndTitle() {
@@ -116,12 +119,9 @@ class quizViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func answer(_ sender: Any) {
-        
         //一時的にクイズを取り出す配列
-     
-        
         writeAnswer = photoTitle.text!
-        
+    
         func performSegueToResult(){
             performSegue(withIdentifier: "toResultView", sender: nil)
         }
@@ -134,7 +134,6 @@ class quizViewController: UIViewController,UITextFieldDelegate {
 //            answerImage.alpha = 0.0
 //            UIView.animate(withDuration: 2.0, animations: self.answerImage.alpha = CGFloat(1.0), completion: nil)
 ////            UIView.animate(withDuration: 2.0, delay: 1.0, options: [.curveEaseIn],animations: self.answerImage.alpha = CGFloat(1.0), completion: nil)
-            
 //                    answerImage.animation = "shake"
 //                    answerImage.curve = "easeInOut"
 //                    answerImage.duration = 1.0
@@ -143,10 +142,9 @@ class quizViewController: UIViewController,UITextFieldDelegate {
             answerImage.image = UIImage(named:"false.png")
             setAudioPlayer(soundName : "Quiz-Wrong_Buzzer02-1", type : "mp3")
             audioPlayer1.play()
+            self.photoTitle.text = self.quizArray[0].title
+            self.photoTitle.textColor = UIColor.red
         }
-        
-        //解いた問題をquizArrayから取り除く
-        quizArray.remove(at: 0)
         
         //解いた問題数の合計値があらかじめ設定していた問題数に達したら結果画面へ
         if quizArray.count == 0 {
@@ -155,13 +153,20 @@ class quizViewController: UIViewController,UITextFieldDelegate {
             setPhotoAndTitle()
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-            self.photoTitle.text = ""
+        
+                self.photoTitle.text = ""
             self.answerImage.image = nil
+
         }
+        label.text = String(correctAnswer)
+        
+        //解いた問題をquizArrayから取り除く
+        quizArray.remove(at: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
           photoTitle.frame.origin.y = originHeight
+        self.photoTitle.textColor = UIColor.black
     }
     
     //セグエを準備（prepare）するときに呼ばれるメソッド

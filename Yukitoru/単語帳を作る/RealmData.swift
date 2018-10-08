@@ -11,6 +11,7 @@ import RealmSwift
 
 final class RealmData: Object {
     
+    @objc dynamic var wordListName = ""
     @objc dynamic var photoImageData = Data()
     @objc dynamic var title = ""
     

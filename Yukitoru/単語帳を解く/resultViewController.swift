@@ -11,7 +11,7 @@ import RealmSwift
 import Spring
 
 
-class resultViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
+class resultViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet var table: UITableView!{
         didSet{
@@ -41,8 +41,6 @@ class resultViewController: UIViewController, UITableViewDataSource,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         cell?.textLabel?.text = realmDataArray[indexPath.row].title
-        
-//        cell?.imageView?.image = UIImage(data: realmDataArray.photoImageData)
         return cell!
     }
     
