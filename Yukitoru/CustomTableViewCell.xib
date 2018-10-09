@@ -32,6 +32,10 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageView" destination="4zn-MM-pDu" id="XOl-Gd-CWM"/>
+                <outlet property="label" destination="Tpb-DS-4nx" id="p7c-LI-Tyz"/>
+            </connections>
             <point key="canvasLocation" x="138.40000000000001" y="129.53523238380811"/>
         </tableViewCell>
     </objects>

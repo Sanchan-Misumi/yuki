@@ -34,6 +34,7 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     let imageAndTitle = RealmData()
     var wordListArray: Array<RealmWords>!
     var onlyWordArray = [RealmWords]()
+    var wordTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +56,8 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        wordListArray = realm.objects(RealmWords.self).map{$0}
-//        self.loadView()
+        wordListArray = realm.objects(RealmWords.self).map{$0}
+//     self.loadView()
     }
     //UIKeyboardWillShow通知を受けて、実行される関数
     @objc func keyboardWillShow(_ notification: NSNotification){
@@ -95,7 +96,7 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         imageAndTitle.photoImageData = imageData
         imageAndTitle.title = textField.text!
-        
+        imageAndTitle.wordListName = wordTitle
         print(imageAndTitle)
         try! realm.write{
             realm.add(imageAndTitle)
@@ -107,6 +108,8 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         textField.text = ""
         photoImage.image = nil
+        
+
 
     }
     
@@ -175,7 +178,10 @@ class OneWordViewController: UIViewController, UIImagePickerControllerDelegate, 
     
 //    UIPickerViewのRowが選択された時の挙動
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        imageAndTitle.wordListName = wordListArray[row].word
+        
+        wordTitle = wordListArray[row].word
+        print("問題を登録する時のwordListArray[row].wordの中身は\(wordListArray[row].word)です")
+        print("問題を登録する時のimageAndTitle.wordListNameの中身は\(imageAndTitle.wordListName)です")
     }
     
     

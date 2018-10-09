@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 class WordListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
+    
     let realm = try! Realm()
     
     var realmDataArray: Array<RealmData>!
@@ -18,6 +19,7 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
     var allArray = [String(),Data()] as [Any]
     var titleArray = [String()]
     var imageArray = [Data()]
+    var realmDataNumber: Int = 0
 
     @IBOutlet var table: UITableView!{
         didSet{
@@ -29,22 +31,26 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
          realmDataArray = realm.objects(RealmData.self).map{$0}
-        for i in realmDataArray {
-        if wordName == imageAndTitle.wordListName{
-//            allArray.append(contentsOf: "\(imageAndTitle.title)","\(imageAndTitle.photoImageData)")
-            titleArray.append(imageAndTitle.title)
-            imageArray.append(imageAndTitle.photoImageData)
-            print("wordListViewControllerでwordNameに入っているのは\(String(describing: wordName))です")
-            print("wordListViewControllerでtitleArrayに入っているのは\(titleArray)です")
-            print("wordListViewControllerでimageArrayに入っているのは\(imageArray)です")
-//            allArray.append(contentsOf: [(imageAndTitle.title),(imageAndTitle.photoImageData)])
-        }
+        print("WordListViewControllerが表示されました")
+        print("WordListViewControllerで最初にrealmDataArray.wordListNameに入っているのは\(String(describing: realmDataArray))です")
+
+
         }
 
-        
-        // Do any additional setup after loading the view.
-         
+    override func viewWillAppear(_ animated: Bool) {
+        for i in 0...realmDataArray.count {
+            if wordName == realmDataArray[i].wordListName{
+                titleArray.append(realmDataArray[i].title)
+                imageArray.append(realmDataArray[i].photoImageData)
+                print("wordListViewControllerでwordNameに入っているのは\(String(describing: wordName))です")
+                print("wordListViewControllerでtitleArrayに入っているのは\(titleArray)です")
+                print("wordListViewControllerでimageArrayに入っているのは\(imageArray)です")
+                //            allArray.append(contentsOf: [(imageAndTitle.title),(imageAndTitle.photoImageData)])
+            }
     }
+    }
+        // Do any additional setup after loading the view.
+    
     
     //tableViewの数を指定するコード
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

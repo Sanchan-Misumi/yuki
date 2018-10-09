@@ -7,18 +7,28 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CustomTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//
+//
+//    @IBOutlet var cellImageView: UIImageView!
+//    @IBOutlet var celllabel: UILabel!
+//
+////    func セルに表示するデータの制御(選択数はこれを使う:IndexPath){
+////        self.celllabel.text = String((選択数はこれを使う.row) + 1)
+////        self.cellImageView.image = UIImage(named: )
+////    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
+//
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
+    
     
 }

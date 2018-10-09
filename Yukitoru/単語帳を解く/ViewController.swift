@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("最初の画面が呼び込まれたよ")
         smallButtom.animation = "fadeInUp"
         smallButtom.curve = "easeInOut"
         smallButtom.duration = 5.0
