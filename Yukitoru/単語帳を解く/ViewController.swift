@@ -15,6 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet var label: SpringLabel!
     @IBOutlet var label0: UILabel!
     
+//    @IBOutlet var pickerView: UIPickerView! {
+//        didSet {
+//            pickerView.delegate = self
+//            pickerView.dataSource = self
+//            pickerView.reloadAllComponents()
+//        }
+//    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("最初の画面が呼び込まれたよ")

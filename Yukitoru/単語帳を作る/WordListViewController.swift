@@ -21,6 +21,7 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
     var imageArray = [Data()]
     var realmDataNumber: Int = 0
 
+    
     @IBOutlet var table: UITableView!{
         didSet{
             table.dataSource = self
@@ -33,12 +34,16 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
          realmDataArray = realm.objects(RealmData.self).map{$0}
         print("WordListViewControllerが表示されました")
         print("WordListViewControllerで最初にrealmDataArray.wordListNameに入っているのは\(String(describing: realmDataArray))です")
+        // nibName = xibに指定したUITableViewCellのClass名
+        // forCellReuseIdentifier = このTableViewCellに設定するIdentifier
+//        table.register(cellClass: CustomTableViewCell, forCellReuseIdentifier: "Cell")
 
-
+        //カスタムセルを使うためのコード
+//        table.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "再利用セル")
         }
 
     override func viewWillAppear(_ animated: Bool) {
-        for i in 0...realmDataArray.count {
+        for i in 0..<realmDataArray.count {
             if wordName == realmDataArray[i].wordListName{
                 titleArray.append(realmDataArray[i].title)
                 imageArray.append(realmDataArray[i].photoImageData)
@@ -55,13 +60,17 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
     //tableViewの数を指定するコード
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return titleArray.count
+        
     }
     
     //tableViewに表示させるものを指定するコード
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = titleArray[indexPath.row]
         
+        
+        cell?.textLabel?.text = titleArray[indexPath.row]
+        cell?.imageView?.image = UIImage(data: imageArray[indexPath.row])
+
         return cell!
     }
     //tableViewを触った時に動くコード
@@ -71,11 +80,11 @@ class WordListViewController: UIViewController,UITableViewDataSource,UITableView
     
     //delete機能をつけるためのコード
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-                if editingStyle == .delete {
-                    titleArray.remove(at: indexPath.row)
-                    imageArray.remove(at: indexPath.row)
-                    table.deleteRows(at: [indexPath], with: .fade)
-                }
+//                if editingStyle == .delete {
+//                    titleArray.remove(at: indexPath.row)
+//                    imageArray.remove(at: indexPath.row)
+//                    table.deleteRows(at: [indexPath], with: .fade)
+//                }
         
     }
     

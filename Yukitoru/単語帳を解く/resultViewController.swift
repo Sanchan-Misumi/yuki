@@ -12,6 +12,14 @@ import Spring
 
 
 class resultViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+  
+    let realm = try! Realm()
+    let imageAndTitle = RealmData()
+    var wordListArray: Array<RealmWords>!
+    var onlyWordArray = [RealmWords]()
+    var wordTitle: String = ""
+    
+    var realmDataArray: Results<RealmData>!
 
     @IBOutlet var table: UITableView!{
         didSet{
@@ -22,11 +30,7 @@ class resultViewController: UIViewController,UITableViewDataSource,UITableViewDe
     @IBOutlet var label:UILabel!
     
     var correctAnswer: Int = 0
-
-    let realm = try! Realm()
-    
-    var realmDataArray: Results<RealmData>!
-    let imageAndTitle = RealmData()
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,7 @@ class resultViewController: UIViewController,UITableViewDataSource,UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         cell?.textLabel?.text = realmDataArray[indexPath.row].title
+        cell?.imageView?.image = UIImage(data: realmDataArray[indexPath.row].photoImageData)
         return cell!
     }
     

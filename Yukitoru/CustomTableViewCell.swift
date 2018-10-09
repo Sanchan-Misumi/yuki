@@ -7,18 +7,13 @@
 //
 
 import UIKit
-import RealmSwift
 
 class CustomTableViewCell: UITableViewCell {
-//
-//
-//    @IBOutlet var cellImageView: UIImageView!
-//    @IBOutlet var celllabel: UILabel!
-//
-////    func セルに表示するデータの制御(選択数はこれを使う:IndexPath){
-////        self.celllabel.text = String((選択数はこれを使う.row) + 1)
-////        self.cellImageView.image = UIImage(named: )
-////    }
+
+
+    @IBOutlet var cellImageView: UIImageView!
+    @IBOutlet var celllabel: UILabel!
+
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code
@@ -26,9 +21,11 @@ class CustomTableViewCell: UITableViewCell {
 //
 //    override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
-//
 //        // Configure the view for the selected state
 //    }
-    
+//
+//    func setData(indexPathNumber: IndexPath){
+//        self.setData(indexPathNumber: <#T##IndexPath#>)
+//    }
     
 }

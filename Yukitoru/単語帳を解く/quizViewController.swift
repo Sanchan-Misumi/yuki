@@ -95,13 +95,14 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         
         let keyboardHeight = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue.height
         photoTitle.frame.origin.y = SCREEN_SIZE.height - keyboardHeight - photoTitle.frame.height
-        
+        self.photoTitle.textColor = UIColor.black
     }
     
     
     //UIKeyboardWillShow通知を受けて、実行される関数
    @objc func keyboardWillHide(_ notification: NSNotification){
     photoTitle.frame.origin.y = originHeight
+    self.photoTitle.textColor = UIColor.black
     }
     
     func setPhotoAndTitle() {
@@ -130,6 +131,8 @@ class quizViewController: UIViewController,UITextFieldDelegate {
         if writeAnswer == quizArray[0].title {
             correctAnswer = correctAnswer + 1
             answerImage.image = UIImage(named: "true.png")
+            self.photoTitle.textColor = UIColor.black
+            
             setAudioPlayer(soundName : "Quiz-Correct_Answer02-2", type : "mp3")
             audioPlayer1.play()
             
@@ -137,6 +140,7 @@ class quizViewController: UIViewController,UITextFieldDelegate {
             springImage.curve = "easeInOut"
             springImage.duration = 1.0
             springImage.animate()
+        
         } else if writeAnswer != quizArray[0].title{
             answerImage.image = UIImage(named:"false.png")
             setAudioPlayer(soundName : "Quiz-Wrong_Buzzer02-1", type : "mp3")

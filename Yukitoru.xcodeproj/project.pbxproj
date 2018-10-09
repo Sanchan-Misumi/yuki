@@ -275,10 +275,8 @@
 				EECF51552161C05300194099 /* RealmData.swift */,
 				EED966C6216B2965002D9711 /* RealmWords.swift */,
 				EE84AF58215B862B00BBD5C1 /* imageViewController.swift */,
-				EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */,
 				EEFF9D612169C0D30055C81D /* WordListViewController.swift */,
 				EEFF9D5F2169C0AE0055C81D /* MyWordViewController.swift */,
-				EE2B03E6216AC29D00A54A9D /* OneWordViewController.swift */,
 				EEFF9D632169C1380055C81D /* CreatMyWordViewController.swift */,
 			);
 			path = "単語帳を作る";
@@ -289,6 +287,8 @@
 			children = (
 				EEC7C70C215B686500CDAEC7 /* ViewController.swift */,
 				EE84AF5A215B863F00BBD5C1 /* quizViewController.swift */,
+				EE84AF5C215B864C00BBD5C1 /* resultViewController.swift */,
+				EE2B03E6216AC29D00A54A9D /* OneWordViewController.swift */,
 			);
 			path = "単語帳を解く";
 			sourceTree = "<group>";
